@@ -10,10 +10,13 @@
   <div id="app">请稍等一会...</div>
   <script>
     window.$docsify = {
+      if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+    }
       relativePath: true,
-      coverpage: true,
+      coverpage: ['/', '/de/', '/fr/', '/ja/' , '/ru/', '/zh-cn/', '/zh-tw/'],
       loadNavbar: true,
-      fallbackLanguages: ['fr', 'de'],
+      fallbackLanguages: ['/de/', '/fr/', '/ja/' , '/ru/', '/zh-cn/', '/zh-tw/'],
       notFoundPage: true
     }
   </script>
